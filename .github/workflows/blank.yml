@@ -15,4 +15,4 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-        echo ${{ secrets.ssh_key_pk }}
+        echo "ssh_key_pk : ${{ secrets.ssh_key_pk }}"
