@@ -16,6 +16,17 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
         echo "ssh_key_pk : ${{ secrets.ssh_key_pk }}"
+
+    - name: Deploy to Server via scp
+      uses: horochx/deploy-via-scp@master
+      with:
+        local: dist
+        remote: "dist"
+        host: "139.198.13.100"
+        port: "10003"
+        user: "jiker_deployer"
+        key: ${{ secrets.SSH_KEY_PK	}}
+
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@v2.0.7
       env:
