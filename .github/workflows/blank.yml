@@ -24,5 +24,5 @@ jobs:
         SOURCE: "dist/"
         REMOTE_HOST: "139.198.13.100"
         REMOTE_USER: "jiker_deployer"
-        REMOTE_PORT: 10003
+        REMOTE_PORT: "10003"
         TARGET: "dist/"
