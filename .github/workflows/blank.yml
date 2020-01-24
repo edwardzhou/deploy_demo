@@ -27,6 +27,19 @@ jobs:
         user: "jiker_deployer"
         key: ${{ secrets.SSH_KEY_PK	}}
 
+    - name: multiple command
+      uses: appleboy/ssh-action@master
+      with:
+        host: "139.198.13.100"
+        port: "10003"
+        username: "jiker_deployer"
+        key: ${{ secrets.SSH_KEY_PK }}
+        script: |
+          whoami
+          ls -al
+          echo "abc" >> aaa.txt
+      
+
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@v2.0.7
       env:
