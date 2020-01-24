@@ -17,9 +17,9 @@ jobs:
         echo test, and deploy your project.
         echo "ssh_key_pk : ${{ secrets.ssh_key_pk }}"
     - name: Deploy to Server
-    uses: easingthemes/ssh-deploy@v2.0.7
-    env:
-        SSH_PRIVATE_KEY: ${{ secrets.ssh_key_pk }}
+      uses: easingthemes/ssh-deploy@v2.0.7
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY_PK	}}
         ARGS: "-rltgoDzvO --delete"
         SOURCE: "dist/"
         REMOTE_HOST: "139.198.13.100"
